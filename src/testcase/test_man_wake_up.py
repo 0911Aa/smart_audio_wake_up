@@ -6,9 +6,6 @@ Created on 2018年11月20日
 '''
 
 from utils.play_aidio import play
-from utils.record_audio import get_audio
-import pyaudio
-import threading
 import os
 import settings.DIR_PATH as path
 import pytest,time,allure
@@ -18,7 +15,7 @@ from utils import get_device_log as gdl
 
 @allure.feature("男生唤醒测试")
 @pytest.mark.P1
-class Test_wake:
+class Test_man_wake:
     def setup_class(cls):
 
         dr = Driver()
@@ -39,7 +36,7 @@ class Test_wake:
     def test_case1(self):
         GDL = gdl.Get_device_log()  # 初始化
 
-        play('woman_wake_up', path.wake_up_file)  # 播放唤醒词
+        play('man_wake_up', path.wake_up_file)  # 播放唤醒词
         wake_finish_time = GDL.get_local_time()
         print(wake_finish_time)
         time.sleep(2)

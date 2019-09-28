@@ -18,7 +18,7 @@ from utils import get_device_log as gdl
 
 @allure.feature("女生唤醒测试")
 @pytest.mark.P1
-class Test_wake:
+class Test_woman_wake:
     def setup_class(cls):
 
         dr = Driver()
