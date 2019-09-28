@@ -1,0 +1,131 @@
+{
+  "uid" : "afcd12a17f85cfd2",
+  "name" : "test_case2[2-5]",
+  "fullName" : "src.testcase.test_wake_up.Test_wake#test_case2[2-5]",
+  "historyId" : "45d5c0d7fc99512fb8bf1ef06ec3bba6",
+  "time" : {
+    "start" : 1569632804947,
+    "stop" : 1569632846032,
+    "duration" : 41085
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1569632757816,
+      "stop" : 1569632757851,
+      "duration" : 35
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "__pytest_repeat_step_number",
+    "time" : {
+      "start" : 1569632804946,
+      "stop" : 1569632804946,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1569632997457,
+      "stop" : 1569632997457,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "0001.女生唤醒"
+  }, {
+    "name" : "feature",
+    "value" : "通话测试"
+  }, {
+    "name" : "tag",
+    "value" : "P1"
+  }, {
+    "name" : "parentSuite",
+    "value" : "src.testcase"
+  }, {
+    "name" : "suite",
+    "value" : "test_wake_up"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_wake"
+  }, {
+    "name" : "host",
+    "value" : "WINDOWS-POQJ4DC"
+  }, {
+    "name" : "thread",
+    "value" : "14108-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "src.testcase.test_wake_up"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "__pytest_repeat_step_number",
+    "value" : "1"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "f9b91e241583422e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1569631800079,
+          "stop" : 1569631840150,
+          "duration" : 40071
+        }
+      } ]
+    },
+    "tags" : [ "P1" ]
+  },
+  "source" : "afcd12a17f85cfd2.json",
+  "parameterValues" : [ "1" ]
+}

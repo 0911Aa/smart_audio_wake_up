@@ -1,0 +1,6 @@
+"Status","Name","Duration in ms","Description"
+"passed","src.testcase.test_wake_up.Test_wake#test_case2[4-5]","41504",""
+"passed","src.testcase.test_wake_up.Test_wake#test_case2[2-5]","41085",""
+"passed","src.testcase.test_wake_up.Test_wake#test_case2[3-5]","41333",""
+"passed","src.testcase.test_wake_up.Test_wake#test_case2[5-5]","41384",""
+"passed","src.testcase.test_wake_up.Test_wake#test_case2[1-5]","40474",""
