@@ -30,6 +30,7 @@ class Test_woman_wake:
 
 
     def teardown(self):
+        print("this case finishd")
         cmd = 'del /F /S /Q D:\\text_all_new'
 
         os.system(cmd)
