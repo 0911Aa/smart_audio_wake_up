@@ -50,14 +50,17 @@ class Test_man_wake:
         print("\033[7;31m收到唤醒词的时间：\033[0m", start_time)
         end_time, new_result = GDL.get_device_wake()
         print("返回%s的时间是%f" % (new_result, end_time))
+        if len(new_result) >10:
+            wait_limit_time = 4
+        wait_limit_time = 2
         wait_time = end_time - start_time
         check_time = abs(wake_finish_time - start_time)
         print("唤醒耗时", wait_time)
         print("本地时间误差", check_time)
-        if wait_time >= 2 or check_time >= 5:
+        if wait_time >= wait_limit_time or check_time >= 5:
             fail_dir_name = time.strftime("%d_%H_%M_%S")
             cmd = "adb pull sdcard/txz/log " + path.DIR_PATH + "\\report\\error_log\\" + fail_dir_name + "women_wake_up\\"
             print(cmd)
             os.system(cmd)
-            raise Exception("唤醒异常")
+            raise Exception("没有唤醒或唤醒响应时间超过2s")
 
