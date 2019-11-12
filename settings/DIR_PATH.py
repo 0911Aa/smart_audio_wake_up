@@ -2,7 +2,7 @@
 import os
 
 DIR_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PC_PATH = "C:\\Users\\pengfy\\PycharmProjects\\smart-audio\\"
+PC_PATH = "D:\\"
 web_path = DIR_PATH+'\src\py3_web.py'
 result_path = DIR_PATH+'\\settings\\result.txt'
 currtxt_path = DIR_PATH+'\\settings\\current_file.txt'
