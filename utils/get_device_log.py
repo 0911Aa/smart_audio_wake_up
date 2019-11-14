@@ -81,7 +81,8 @@ class Get_device_log:
             # print(parse_list)
             last_line = parse_list[-1]
             result_time = last_line.split(" ")[1].split("]")[0]
-            ret_time = int(result_time.split(":")[1]) * 60 + float(result_time.split(":")[2])
+            time_list = result_time.split(":")
+            ret_time = int(time_list[0])*3600+int(time_list[1]) * 60 + float(time_list[2])
             return ret_time
 
     def get_device_wake(self):
@@ -105,7 +106,8 @@ class Get_device_log:
             # print(last_line)
             result_time = last_line.split(" ")[1].split("]")[0]
             new_result = last_line.split("text=")[1]
-            ret_time = int(result_time.split(":")[1])*60+float(result_time.split(":")[2])
+            time_list = result_time.split(":")
+            ret_time = int(time_list[0])*3600+int(time_list[1])*60+float(time_list[2])
             # print(ret_time,new_result)
             return ret_time,new_result
 
@@ -149,6 +151,6 @@ if __name__ == "__main__":
     # print(end_time)
     end_time = gl.get_device_wake()
     print(end_time)
-    # start_time = gl.get_begin_parse()
-    # print(start_time)
+    start_time = gl.get_begin_parse()
+    print(start_time)
     # print(gl.get_last_ret("已为您规划3个导航路线"))
