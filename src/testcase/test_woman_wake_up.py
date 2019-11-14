@@ -59,8 +59,12 @@ class Test_woman_wake:
         print("本地时间误差", check_time)
         if wait_time >= 2 or check_time >= 5 :
             fail_dir_name = time.strftime("%d_%H_%M_%S")
-            cmd = "adb pull sdcard/txz/log " + path.DIR_PATH + "\\report\\error_log\\" + fail_dir_name + "women_wake_up\\"
+            dir_path = path.DIR_PATH + "\\report\\error_log\\" + fail_dir_name + "women_wake_up\\"
+            os.makedirs(dir_path)
+            cmd = "adb pull sdcard/txz/log " + dir_path
             print(cmd)
             os.system(cmd)
-            raise Exception("唤醒异常")
+            raise Exception("没有唤醒或唤醒响应时间超过2s")
+        else:
+            print("case pass...")
 
