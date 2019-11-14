@@ -7,7 +7,7 @@ class Get_device_log:
     def get_local_time(self):
         local_time = time.strftime("%X")
         print(local_time)
-        ret_time = int(local_time.split(":")[1]) * 60 + float(local_time.split(":")[2])
+        ret_time = int(local_time.split(":")[0])*3600+int(local_time.split(":")[1]) * 60 + float(local_time.split(":")[2])
         return ret_time
 
     def get_device_log(self):
@@ -153,4 +153,5 @@ if __name__ == "__main__":
     print(end_time)
     start_time = gl.get_begin_parse()
     print(start_time)
+    print(gl.get_local_time())
     # print(gl.get_last_ret("已为您规划3个导航路线"))
