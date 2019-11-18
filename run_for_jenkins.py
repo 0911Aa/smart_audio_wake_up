@@ -21,9 +21,9 @@ class Run:
         time.sleep(2)
         subprocess.call(cmd2, shell=True)
         cmd1 = "adb connect 192.168.0.2:5555"
-        cmd2 = "python -m uiautomator2 init"
+        # cmd2 = "python -m uiautomator2 init"
         subprocess.call(cmd1, shell=True)
-        subprocess.call(cmd2, shell=True)
+        # subprocess.call(cmd2, shell=True)
     # logger.info("初始化运行环境!")
 
     def init_report(self):
