@@ -58,7 +58,7 @@ class Test_man_wake:
         check_time = abs(wake_finish_time - start_time)
         print("唤醒耗时", wait_time)
         print("本地时间误差", check_time)
-        if wait_time >= wait_limit_time or check_time >= 5:
+        if wait_time >= wait_limit_time or check_time >= 7:
             fail_dir_name = time.strftime("%d_%H_%M_%S")
             dir_path = path.DIR_PATH + "\\report\\error_log\\" + fail_dir_name + "men_wake_up\\"
             os.makedirs(dir_path)
