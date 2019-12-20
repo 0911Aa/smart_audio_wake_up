@@ -16,14 +16,12 @@ class Get_device_log:
         :return:
         """
         try:
-            cmd = "adb pull sdcard/txz/log/text_all "+path.device_log_path
-            subprocess.call(cmd,shell=True)
             cmd = "adb pull sdcard/txz/log/text_all_1 "+path.device_log_path
             subprocess.call(cmd,shell=True)
-            cmd = "adb pull sdcard/txz/log/text_all_1 "+path.device_log_path
-            subprocess.call(cmd,shell=True)
-            cmd = "adb pull sdcard/txz/log/text_all "+path.device_log_path
-            subprocess.call(cmd,shell=True)
+            # cmd = "adb pull sdcard/txz/log/text_all_1 "+path.device_log_path
+            # subprocess.call(cmd,shell=True)
+            # cmd = "adb pull sdcard/txz/log/text_all "+path.device_log_path
+            # subprocess.call(cmd,shell=True)
             # p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             # file_list = os.listdir(path.device_log_path+"\\log")
             # print(file_list)
@@ -31,16 +29,24 @@ class Get_device_log:
             with open(path.device_log_path+"\\text_all_1",'rb') as f1:
                 data1 = f1.read()
                 # data1 = f1.read()
-            with open(path.device_log_path+"\\text_all",'rb') as f2:
-                data2 = f2.read()
-            with open("D:/text_all_new",'a',encoding="utf-8") as f3:
+            with open("D:/text_all_new", 'a', encoding="utf-8") as f3:
 
                 # f3.writelines(data1[-500:])
-                f3.write(data1.decode("utf-8","ignore"))
-                time.sleep(1)
-                f3.write(data2.decode("utf-8","ignore"))
+                f3.write(data1.decode("utf-8", "ignore"))
         except Exception as e:
             print(e)
+        try:
+            cmd = "adb pull sdcard/txz/log/text_all " + path.device_log_path
+            subprocess.call(cmd, shell=True)
+            with open(path.device_log_path + "\\text_all", 'rb') as f2:
+                data2 = f2.read()
+            with open("D:/text_all_new", 'a', encoding="utf-8") as f3:
+
+                # f3.writelines(data1[-500:])
+                f3.write(data2.decode("utf-8", "ignore"))
+        except Exception as e:
+            print(e)
+
         # else:
         #     cmd = "adb pull sdcard/txz/log/text_all " + path.device_log_path
         #     subprocess.call(cmd, shell=True)
