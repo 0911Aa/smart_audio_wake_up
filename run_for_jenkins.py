@@ -36,8 +36,10 @@ class Run:
 
     def get_batch_size(self):
         #['run_for_jenkins.py', '23']
-        print(sys.argv)
+        print("参数---->",sys.argv)
+        print('---------->',type(sys.argv))
         argvL = sys.argv.split(' ')
+        print('argvL---->',argvL)
         testtimes = argvL[1]
         print("test_times",testtimes)
         config.test_times = int(testtimes)
