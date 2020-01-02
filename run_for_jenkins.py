@@ -47,6 +47,7 @@ class Run:
 
 if __name__ == "__main__":
     run = Run()
+    run.get_batch_size()
     run.init_env()
     base_path = DIR_PATH.DIR_PATH
     pytest.main(["-s",base_path+"/src/testcase","--alluredir="+base_path+"/data", "-m=P1"])
