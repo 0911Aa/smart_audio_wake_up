@@ -46,7 +46,7 @@ class Run:
             config.status = True
         else:
             config.status=False
-        config.stop_times = int(stopTimes)
+        config.stop_times = stopTimes
 
 
 if __name__ == "__main__":
