@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-import atx,time
-import subprocess
 import uiautomator2  as ut2
 from config import *
 

@@ -88,7 +88,7 @@ def on_message(ws, message):
         sid = json.loads(message)["sid"]
         if code != 0:
             errMsg = json.loads(message)["message"]
-            print("sid:%s call error:%s code is:%s" % (sid, errMsg, code))
+            print("sid:%s call error_log:%s code is:%s" % (sid, errMsg, code))
         else:
             data = json.loads(message)["data"]
             # print("data",data)
@@ -105,7 +105,7 @@ def on_message(ws, message):
 
 # 收到websocket错误的处理
 def on_error(ws, error):
-    print("### error:", error)
+    print("### error_log:", error)
 
 
 # 收到websocket关闭的处理

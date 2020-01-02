@@ -37,7 +37,7 @@ class Test_woman_wake:
         os.system(cmd)
 
     @allure.story('0001.女生唤醒')
-    @pytest.mark.repeat(5)
+    @pytest.mark.repeat(test_times)
     def test_case1(self):
         GDL = gdl.Get_device_log()  # 初始化
 

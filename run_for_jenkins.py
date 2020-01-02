@@ -6,7 +6,7 @@ import pytest,os,subprocess,time
 from settings import DIR_PATH
 import sys
 sys.path.append(DIR_PATH.DIR_PATH)
-
+import config
 
 class Run:
     def __init__(self):
@@ -33,6 +33,13 @@ class Run:
         project_path = os.path.abspath(os.path.dirname(__file__))
         report_path = project_path + "/reports/" + "index.html"
         print("报告地址:{}".format(report_path))
+
+    def get_batch_size(self):
+        #['run_for_jenkins.py', '23']
+        print(sys.argv)
+        testtimes = sys.argv[1]
+        print("test_times",testtimes)
+        config.test_times = int(testtimes)
 
 
 if __name__ == "__main__":
