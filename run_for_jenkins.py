@@ -38,11 +38,15 @@ class Run:
         #['run_for_jenkins.py', '23']
         print("参数---->",sys.argv)
         print('---------->',type(sys.argv))
-        argvL = sys.argv.split(' ')
-        print('argvL---->',argvL)
-        testtimes = argvL[1]
+        testtimes = sys.argv[1]
+        stopTimes = sys.argv[-1]
         print("test_times",testtimes)
         config.test_times = int(testtimes)
+        if sys.argv[2] == 'on':
+            config.status = True
+        else:
+            config.status=False
+        config.stop_times = int(stopTimes)
 
 
 if __name__ == "__main__":
@@ -50,8 +54,11 @@ if __name__ == "__main__":
     run.get_batch_size()
     run.init_env()
     base_path = DIR_PATH.DIR_PATH
-    pytest.main(["-s",base_path+"/src/testcase","--alluredir="+base_path+"/data", "-m=P1"])
+    if config.status:
+        pytest.main(["-s",base_path+"/src/testcase","--alluredir="+base_path+"/data", "-m=P1","-x","--maxfail="+config.stop_times])
     # "--reruns=2",
+    else:
+        pytest.main(["-s", base_path + "/src/testcase", "--alluredir=" + base_path + "/data", "-m=P1"])
     run.init_report()
 
 #pytest -v 说明：可以输出用例更加详细的执行信息，比如用例所在的文件及用例名称等

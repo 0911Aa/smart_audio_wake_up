@@ -2,6 +2,8 @@
 import os
 
 test_times = 1
+status = True
+stop_times = 1
 device_name="192.168.0.2:5555"
 wake_time = 2.5
 wait_timeout = 15
